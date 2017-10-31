@@ -51,6 +51,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Flare Gun\Scripts\flarebullet.cs" />
+     <Compile Include="Assets\Flare Gun\Scripts\flaregun.cs" />
+     <Compile Include="Assets\Flare Gun\Scripts\flareround.cs" />
+     <Compile Include="Assets\Flare Gun\Scripts\swayc.cs" />
+     <Compile Include="Assets\Flare Gun\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Scripts\gun.cs" />
+     <Compile Include="Assets\Scripts\gunController.cs" />
      <Compile Include="Assets\Scripts\player.cs" />
      <Compile Include="Assets\Scripts\playerController.cs" />
  <Reference Include="UnityEngine.UIAutomation">
