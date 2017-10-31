@@ -17,6 +17,11 @@ public class playerController : MonoBehaviour {
 		velocity = v;
 	}
 
+	/* Turns the player using mouse */
+	public void LookAt(Vector3 point){
+		Vector3 yCorrection = new Vector3 (point.x, transform.position.y, point.z);
+		transform.LookAt (yCorrection);
+	}
 	public void FixedUpdate(){
 		_rigidbody.MovePosition (_rigidbody.position + velocity * Time.fixedDeltaTime);
 	}
