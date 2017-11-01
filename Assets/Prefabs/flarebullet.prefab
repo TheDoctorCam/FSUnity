@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1500000}
   - component: {fileID: 2600000}
   - component: {fileID: 1200000}
+  - component: {fileID: 114323973479437100}
   m_Layer: 0
   m_Name: flarebullet
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0.004960701, y: -0.03185707, z: 0.0052873, w: 0.9994662}
-  m_LocalPosition: {x: -7.567932, y: 3.81818, z: -16.846764}
+  m_LocalPosition: {x: 1.86, y: 2.85, z: 0.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -214,7 +215,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -238,7 +239,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!108 &10800000
 Light:
   m_ObjectHideFlags: 1
@@ -323,3 +324,14 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100002}
   m_IsPrefabParent: 1
+--- !u!114 &114323973479437100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f24db39eedd947cda952d4139483471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

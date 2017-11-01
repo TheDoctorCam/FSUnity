@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 111526968226451770}
   - component: {fileID: 114269211386715058}
   m_Layer: 0
-  m_Name: defaultGun 1
+  m_Name: defaultGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,3 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc3a6203e93746b3a823aacb2c919c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  muzzle: {fileID: 4897997623258490}
+  bullet: {fileID: 114633022130359692, guid: 17684e49602984b48ac28f9759280f76, type: 2}
+  rateOfFire: 100
+  bulletVelocity: 35
