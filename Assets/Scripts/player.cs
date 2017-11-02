@@ -5,7 +5,7 @@ using UnityEngine;
 
 [RequireComponent (typeof (playerController))]
 [RequireComponent (typeof (gunController))]
-public class player : MonoBehaviour {
+public class player : Character {
 
 
 	public float moveSpeed = 5;
@@ -14,7 +14,8 @@ public class player : MonoBehaviour {
 	playerController controller;
 	gunController gunControl;
 
-	void Start () {
+	protected override void Start () {
+		base.Start ();
 		controller = GetComponent<playerController> ();
 		gunControl = GetComponent<gunController> ();
 		viewCamera = Camera.main;
