@@ -22,7 +22,7 @@ public class playerController : MonoBehaviour {
 		Vector3 yCorrection = new Vector3 (point.x, transform.position.y, point.z);
 		transform.LookAt (yCorrection);
 	}
-	public void FixedUpdate(){
+	void FixedUpdate(){
 		_rigidbody.MovePosition (_rigidbody.position + velocity * Time.fixedDeltaTime);
 	}
 }

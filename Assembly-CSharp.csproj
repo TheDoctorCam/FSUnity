@@ -56,8 +56,12 @@
      <Compile Include="Assets\Flare Gun\Scripts\flareround.cs" />
      <Compile Include="Assets\Flare Gun\Scripts\swayc.cs" />
      <Compile Include="Assets\Flare Gun\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Scripts\character.cs" />
+     <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\enemySpawn.cs" />
      <Compile Include="Assets\Scripts\gun.cs" />
      <Compile Include="Assets\Scripts\gunController.cs" />
+     <Compile Include="Assets\Scripts\iDamageable.cs" />
      <Compile Include="Assets\Scripts\player.cs" />
      <Compile Include="Assets\Scripts\playerController.cs" />
      <Compile Include="Assets\Scripts\projectile.cs" />
