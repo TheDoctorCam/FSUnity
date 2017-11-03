@@ -8,6 +8,8 @@ public class Character : MonoBehaviour, iDamageable {
 	protected float health;
 	protected bool dead;
 
+	public event System.Action enemyDeath;	//This function is used to note when one enemy spawn wave is complete
+
 	protected virtual void Start() {
 		health = startHealth;
 	}
@@ -22,6 +24,9 @@ public class Character : MonoBehaviour, iDamageable {
 
 	protected void Death() {
 		dead = true;
+		if (enemyDeath != null) {
+			enemyDeath ();
+		}
 		GameObject.Destroy (gameObject);
 	}
 }
