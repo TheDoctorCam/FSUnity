@@ -5,8 +5,20 @@ using UnityEngine;
 public class projectile : MonoBehaviour {
 
 	public LayerMask collisionMask;
-	float speed = 10;
-	float damage = 1;
+	float speed = 10;			//projectile speed
+	float damage = 1;			//damage per projectile 
+
+	float falloffDistance = 3;	//projectiles falloff after 3 seconds
+
+	void Start(){
+		Destroy (gameObject, falloffDistance);	//projectile deleted after falloff distance 
+
+		//intersectCollision is an array of all the colliders that the projectile intersects with
+		Collider[] intersectCollision = Physics.OverlapSphere (transform.position, .1f, collisionMask);
+		if (intersectCollision.Length > 0) {
+			HitObject (intersectCollision [0]);
+		}
+	}
 
 	public void setSpeed(float newSpeed){
 		speed = newSpeed;
@@ -36,4 +48,13 @@ public class projectile : MonoBehaviour {
 		}
 		GameObject.Destroy (gameObject);
 	}
+
+	void HitObject(Collider collision){
+		iDamageable hitObject = collision.GetComponent<iDamageable> ();
+		if (hitObject != null) {
+			hitObject.ApplyDamage (damage);
+		}
+		GameObject.Destroy (gameObject);
+	}
+
 }

@@ -56,7 +56,7 @@
      <Compile Include="Assets\Flare Gun\Scripts\flareround.cs" />
      <Compile Include="Assets\Flare Gun\Scripts\swayc.cs" />
      <Compile Include="Assets\Flare Gun\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
-     <Compile Include="Assets\Scripts\character.cs" />
+     <Compile Include="Assets\Scripts\Character.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\enemySpawn.cs" />
      <Compile Include="Assets\Scripts\gun.cs" />
