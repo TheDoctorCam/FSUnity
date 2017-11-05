@@ -7,4 +7,5 @@ public interface iDamageable{
 
 	void TakeDamage (float damage, RaycastHit hit);
 
+	void ApplyDamage (float damage);
 }
