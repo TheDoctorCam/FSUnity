@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Character : MonoBehaviour, iDamageable {
 
-	public float startHealth;
-	protected float health;
-	protected bool dead;
+	public float startHealth;	//starting health of character extended children
+	protected float health;		//current health of character extended child
+	protected bool dead;		//true if the characters health is <= 0
 
 	public event System.Action enemyDeath;	//This function is used to note when one enemy spawn wave is complete
 

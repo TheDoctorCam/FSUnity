@@ -8,11 +8,11 @@ using UnityEngine;
 public class player : Character {
 
 
-	public float moveSpeed = 5;
+	public float moveSpeed = 5;			//Move speed of player 
 
-	Camera viewCamera;
-	playerController controller;
-	gunController gunControl;
+	Camera viewCamera;					//FOV of game
+	playerController controller;		//WASD 
+	gunController gunControl;			//Left-click and right-click 
 
 	protected override void Start () {
 		base.Start ();

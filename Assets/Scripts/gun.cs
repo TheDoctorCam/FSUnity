@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class gun : MonoBehaviour {
 
-	public Transform muzzle;
-	public projectile bullet;
-	public float rateOfFire = 100;	//in ms
-	public float bulletVelocity = 35;
+	public Transform muzzle;			//Position of gun muzzle
+	public projectile bullet;			//Type of projectile
+	public float rateOfFire = 100;		//Rate of fire in milliseconds
+	public float bulletVelocity = 35;	//Velocity of bullet 
 
-	float bulletBuffer;
+	float bulletBuffer;					//Time between projectile's firing 
 
 	public void Shoot(){
 

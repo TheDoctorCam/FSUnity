@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class gunController : MonoBehaviour {
 
-	public Transform weaponHold;
-	public gun defaultGun;
-	gun equippedGun;
+	public Transform weaponHold;		//Position on character where they hold the weapon
+	public gun defaultGun;				//Prefab of gun
+	gun equippedGun;					//Active prefab fun
 
 	void Start(){
 		if (defaultGun != null) {
