@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class enemySpawn : MonoBehaviour {
 
-	public Wave[] waves;
-	public Enemy enemy;
+	public Wave[] waves;		//The number of waves 
+	public Enemy enemy;			//Generated enemy type per wave
 
-	Wave currentWave;
-	int currentWaveNumber;
+	Wave currentWave;			//Current wave properties (enemiesToSpawn, enemiesActive)
+	int currentWaveNumber;		//Current wave number
 
-	int enemiesToSpawn;		//number of enemies that will be spawned
-	int enemiesActive;
-	float nextSpawnTime;
+	int enemiesToSpawn;			//number of enemies that will be spawned
+	int enemiesActive;			//number of enemies with state !dead
+	float nextSpawnTime;		//time netween spawned enemies
 
 	void Start(){
 		NextWave ();

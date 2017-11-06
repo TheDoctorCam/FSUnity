@@ -6,17 +6,17 @@ using UnityEngine;
 [RequireComponent (typeof (NavMeshAgent))]
 public class Enemy : Character {
 
-	public enum State {Idle, Chasing, Attacking };
+	public enum State {Idle, Chasing, Attacking };	//enum type State to set players animation
 	State currentState;
 
-	NavMeshAgent pathfinder;
-	Transform target;
+	NavMeshAgent pathfinder;			//provides target via player's mesh
+	Transform target;					//designates target's position as they move
 	Character targetCharacter; 			//detects when target has died after attack
 	Material enemySkin;
 
 	Color enemyColor;					//stores enemies original color for attacking animation
 		
-	float attackDistance = .5f;		//distance that the enemy can lunge at the player
+	float attackDistance = .5f;			//distance that the enemy can lunge at the player
 	float attackTime = 1;				//how long the attack takes
 	float attackCooldown;				//time between attacks 
 	float damage = 1;					//amount damage to player per enemy attack 
