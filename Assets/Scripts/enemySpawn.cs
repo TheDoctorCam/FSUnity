@@ -10,7 +10,7 @@ public class enemySpawn : MonoBehaviour {
 	Wave currentWave;
 	int currentWaveNumber;
 
-	int enemiesToSpawn;
+	int enemiesToSpawn;		//number of enemies that will be spawned
 	int enemiesActive;
 	float nextSpawnTime;
 

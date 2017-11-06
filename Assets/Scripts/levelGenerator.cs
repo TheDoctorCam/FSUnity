@@ -20,8 +20,8 @@ public class levelGenerator : MonoBehaviour {
 
 		string levelName = "Generated Level";	//used to store generated level object in Unity 
 		//Destroy generated level while running dynamically IF new level variables are entered (size, gridBorder, etc)
-		if (transform.FindChild (levelName)) {
-			DestroyImmediate (transform.FindChild (levelName).gameObject);
+		if (transform.Find (levelName)) {
+			DestroyImmediate (transform.Find (levelName).gameObject);
 		}
 
 		Transform levelHolder = new GameObject (levelName).transform;
