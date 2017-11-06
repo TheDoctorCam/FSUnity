@@ -14,7 +14,13 @@ public class Character : MonoBehaviour, iDamageable {
 		health = startHealth;
 	}
 
+	/* TakeDamage passes in damage to be deducted and RaycastHit to instantiate particle effect */
 	public void TakeDamage(float damage, RaycastHit hit){
+		ApplyDamage (damage);
+	}
+
+	/* ApplyDamage deduced the passed in damage from the players current health */
+	public void ApplyDamage(float damage){
 		health -= damage;
 
 		if (health < 1) {
@@ -22,6 +28,7 @@ public class Character : MonoBehaviour, iDamageable {
 		}
 	}
 
+	/* Death if player's health <= 0 */
 	protected void Death() {
 		dead = true;
 		if (enemyDeath != null) {
