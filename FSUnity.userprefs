@@ -1,14 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Editor/LevelEditor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/utility.cs">
     <Files>
-      <File FileName="Assets/Scripts/enemySpawn.cs" Line="57" Column="1" />
-      <File FileName="Assets/Scripts/Character.cs" Line="27" Column="13" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="40" Column="4" />
-      <File FileName="Assets/Scripts/iDamageable.cs" Line="8" Column="40" />
-      <File FileName="Assets/Scripts/projectile.cs" Line="12" Column="1" />
-      <File FileName="Assets/Scripts/levelGenerator.cs" Line="29" Column="3" />
-      <File FileName="Assets/Editor/LevelEditor.cs" Line="10" Column="75" />
+      <File FileName="Assets/Scripts/levelGenerator.cs" Line="22" Column="32" />
+      <File FileName="Assets/Scripts/enemySpawn.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/iDamageable.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/projectile.cs" Line="1" Column="1" />
+      <File FileName="Assets/Editor/LevelEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/utility.cs" Line="25" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

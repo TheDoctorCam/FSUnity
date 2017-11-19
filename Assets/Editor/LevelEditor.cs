@@ -9,10 +9,16 @@ public class LevelEditor : Editor {
 
 	/* Allows dynamic level change in Unity without having to restart game */
 	public override void OnInspectorGUI (){
-		base.OnInspectorGUI ();
 
 		levelGenerator level = target as levelGenerator;
 
-		level.GenerateLevel ();
+		if (DrawDefaultInspector ()) {
+			level.GenerateLevel ();
+		}
+
+		if (GUILayout.Button("Generate Level")){
+			level.GenerateLevel ();
+		}
 	}
+
 }
