@@ -87,7 +87,7 @@ public class Enemy : Character {
 				targetCharacter.ApplyDamage (damage);
 			}
 			actionPercent += Time.deltaTime * attackSpeed;
-			float parabolicAttack = (-actionPercent * actionPercent + actionPercent )*4;	//parabolic function returns actionPercent from 0 -> 100 -> 0
+			float parabolicAttack = (-Mathf.Pow(actionPercent,2) + actionPercent) * 4;	//parabolic function returns actionPercent from 0 -> 100 -> 0
 			transform.position = Vector3.Lerp(startingPosition, attackPosition, parabolicAttack);
 
 			yield return null;

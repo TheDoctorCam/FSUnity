@@ -14,7 +14,10 @@ public class enemySpawn : MonoBehaviour {
 	int enemiesActive;			//number of enemies with state !dead
 	float nextSpawnTime;		//time netween spawned enemies
 
+	levelGenerator level;		//reference to levelGenerator class to get open grid coordinates
+
 	void Start(){
+		level = FindObjectOfType<levelGenerator> ();
 		NextWave ();
 	}
 
@@ -24,11 +27,32 @@ public class enemySpawn : MonoBehaviour {
 			enemiesToSpawn--;
 			nextSpawnTime = Time.time + currentWave.spawnTime;
 
-			Enemy spawnedEnemy = Instantiate (enemy, Vector3.zero, Quaternion.identity) as Enemy;
-			spawnedEnemy.enemyDeath += enemyDeath;
+			StartCoroutine (spawnEnemy ());
 		}
 	}
 
+	/* Spawns enemy to open grid object and flash it's material before spawning */
+	IEnumerator spawnEnemy() {
+		float spawnDelay = 1;		//time between grid object flashing and enemy spawned
+		float gridFlashSpeed = 4;	//amount of flashes per second 
+
+
+		Transform randomGrid = level.getRandomOpenCoordinate ();
+		Material gridColor = randomGrid.GetComponent<Renderer> ().material;
+		Color initialColor = gridColor.color;	//Store original grid color
+		Color flashingColor = Color.red;		//Set to desired color of flash
+		float spawnTimer = 0;					//time spent since coroutine started 
+
+		while (spawnTimer < spawnDelay) {
+			gridColor.color = Color.Lerp (initialColor, flashingColor, Mathf.PingPong (spawnTimer * gridFlashSpeed, 1));	//Mathf.PingPong() bounces between two passed in values
+
+			spawnTimer += Time.deltaTime;
+			yield return null;
+		}
+			
+		Enemy spawnedEnemy = Instantiate (enemy, randomGrid.position + Vector3.up, Quaternion.identity) as Enemy;
+		spawnedEnemy.enemyDeath += enemyDeath;
+	}
 
 	void enemyDeath(){
 		enemiesActive--;
