@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Enemy Scene.unity
+- path: Assets/MYSCENES/gameoverscreen.unity
   isLoaded: 1
   isActive: 1

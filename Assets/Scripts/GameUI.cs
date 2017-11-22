@@ -27,6 +27,6 @@ public class GameUI : MonoBehaviour {
 	}
 
 	public void StartNewGame() {
-		Application.LoadLevel ("Game");
+		Application.LoadLevel("Enemy Scene");
 	}
 }
