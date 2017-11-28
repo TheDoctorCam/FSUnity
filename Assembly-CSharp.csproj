@@ -57,6 +57,7 @@
      <Compile Include="Assets\Prefabs\Flare Gun\Scripts\swayc.cs" />
      <Compile Include="Assets\Prefabs\Flare Gun\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\character.cs" />
+     <Compile Include="Assets\Scripts\crosshairs.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\enemySpawn.cs" />
      <Compile Include="Assets\Scripts\GameUI.cs" />

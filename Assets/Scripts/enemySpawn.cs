@@ -39,7 +39,8 @@ public class enemySpawn : MonoBehaviour {
 
 		Transform randomGrid = level.getRandomOpenCoordinate ();
 		Material gridColor = randomGrid.GetComponent<Renderer> ().material;
-		Color initialColor = gridColor.color;	//Store original grid color
+		//Color initialColor = gridColor.color;	//Store original grid color
+		Color initialColor = Color.white;		// fixes issue of sometimes "sticky" red tiles
 		Color flashingColor = Color.red;		//Set to desired color of flash
 		float spawnTimer = 0;					//time spent since coroutine started 
 

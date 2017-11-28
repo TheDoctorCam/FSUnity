@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameUI : MonoBehaviour {
 
@@ -13,9 +14,11 @@ public class GameUI : MonoBehaviour {
 
 	void endGame() { //  will fade screen to black and show the game over message
 		StartCoroutine(Fade (Color.clear, Color.black,1));
+		Cursor.visible = true; // make mouse cursor visible again
 		gameOverUI.SetActive(true);
 	}
-	IEnumerator Fade(Color from, Color to, float time) { // handles the fading of the screen
+	
+	IEnumerator Fade(Color from, Color to, float time) {
 		float speed = 1 / time;
 		float percent = 0;
 
@@ -27,6 +30,6 @@ public class GameUI : MonoBehaviour {
 	}
 
 	public void StartNewGame() {
-		Application.LoadLevel("Enemy Scene");
+		SceneManager.LoadScene ("Enemy Scene");
 	}
 }
