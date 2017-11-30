@@ -164,6 +164,15 @@ public class levelGenerator : MonoBehaviour {
 		return new Vector3 (-currentLevel.levelSize.x / 2f + 0.5f + x, 0, -currentLevel.levelSize.y / 2f + 0.5f + y) * gridSize;
 	}
 
+	/* Retrieves players coordinates IF the player hasn't moved (prevents camping) */
+	public Transform gridFromCurrentPosition(Vector3 pos){
+		int x = Mathf.RoundToInt(pos.x / gridSize + (currentLevel.levelSize.x - 1) / 2f);
+		int y = Mathf.RoundToInt(pos.z / gridSize + (currentLevel.levelSize.y - 1) / 2f);
+		x = Mathf.Clamp (x, 0, gridMap.GetLength (0));	//prevents invalid array index return
+		y = Mathf.Clamp (y, 0, gridMap.GetLength (1));
+		return gridMap [x, y];
+	}
+
 	/* Dequeue and return first shuffled grid coordinate from shuffled queue */
 	public coordinate getRandomCoordinate(){
 		coordinate randomCoordinate = shuffledGridCoordinates.Dequeue ();
@@ -216,7 +225,6 @@ public class levelGenerator : MonoBehaviour {
 				return new coordinate (levelSize.x / 2, levelSize.y / 2);
 				}
 			}
+	}		
 
-	}
-			
 }

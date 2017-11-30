@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\LevelEditor.cs" />
+     <None Include="Assets\FantasyCharactersLite\readme.txt" />
  <Reference Include="Assembly-UnityScript">
  <HintPath>/Users/Cameron/Documents/GitHub/FSUnity/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>

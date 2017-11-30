@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour, iDamageable {
+public class character : MonoBehaviour, iDamageable {
 
 	public float startHealth;	//starting health of character extended children
 	protected float health;		//current health of character extended child

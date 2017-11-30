@@ -4,14 +4,14 @@ using UnityEngine.AI;
 using UnityEngine;
 
 [RequireComponent (typeof (NavMeshAgent))]
-public class Enemy : Character {
+public class Enemy : character {
 
 	public enum State {Idle, Chasing, Attacking };	//enum type State to set players animation
 	State currentState;
 
 	NavMeshAgent pathfinder;			//provides target via player's mesh
 	Transform target;					//designates target's position as they move
-	Character targetCharacter; 			//detects when target has died after attack
+	character targetCharacter; 			//detects when target has died after attack
 	Material enemySkin;
 
 	Color enemyColor;					//stores enemies original color for attacking animation
@@ -35,7 +35,7 @@ public class Enemy : Character {
 			currentState = State.Chasing;
 			hasTarget = true;
 			target = GameObject.FindGameObjectWithTag ("Player").transform;
-			targetCharacter = target.GetComponent<Character> ();
+			targetCharacter = target.GetComponent<character> ();
 			targetCharacter.enemyDeath += targetDeath;
 
 			playerCollisionRadius = GetComponent<CapsuleCollider> ().radius;
