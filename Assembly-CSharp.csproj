@@ -51,6 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FantasyCharactersLite\Scripts\AttachToBody.cs" />
+     <Compile Include="Assets\FantasyCharactersLite\Scripts\ChangeDisplay.cs" />
+     <Compile Include="Assets\FantasyCharactersLite\Scripts\RotateAround.cs" />
      <Compile Include="Assets\Prefabs\Flare Gun\Scripts\flarebullet.cs" />
      <Compile Include="Assets\Prefabs\Flare Gun\Scripts\flaregun.cs" />
      <Compile Include="Assets\Prefabs\Flare Gun\Scripts\flareround.cs" />
@@ -67,6 +70,7 @@
      <Compile Include="Assets\Scripts\playerController.cs" />
      <Compile Include="Assets\Scripts\projectile.cs" />
      <Compile Include="Assets\Scripts\utility.cs" />
+     <None Include="Assets\FantasyCharactersLite\readme.txt" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>
