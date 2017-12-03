@@ -6,7 +6,6 @@ using UnityEngine;
 [RequireComponent (typeof (NavMeshAgent))]
 public class Enemy : character {
 
-	//public GameObject explosion_effect;
 	public ParticleSystem explosion_effect;
 	public enum State {Idle, Chasing, Attacking };	//enum type State to set players animation
 	State currentState;
@@ -48,7 +47,6 @@ public class Enemy : character {
 	}
 	
 	public override void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection){
-		
 		if(damage >= health)
 			Destroy(Instantiate(explosion_effect.gameObject, hitPoint, Quaternion.FromToRotation(Vector3.forward, hitDirection)) as GameObject, explosion_effect.startLifetime);
 		base.TakeDamage (damage, hitPoint, hitDirection);
