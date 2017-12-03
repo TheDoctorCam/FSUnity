@@ -7,7 +7,7 @@ using UnityEngine;
 [RequireComponent (typeof (gunController))]
 public class player : character {
 
-
+	public crosshairs crosshair;	// create crosshair
 	public float moveSpeed = 5;			//Move speed of player 
 
 	Camera viewCamera;					//FOV of game
@@ -29,13 +29,15 @@ public class player : character {
 
 		/* Look */
 		Ray tracker = viewCamera.ScreenPointToRay (Input.mousePosition);
-		Plane ground = new Plane (Vector3.up, Vector3.zero);
+		Plane ground = new Plane(Vector3.up, Vector3.up * gunControl.GunHeight);
 		float trackerDistance;
 
 		// assings trackerDistance iff ray intersects with plane
 		if (ground.Raycast (tracker, out trackerDistance)) {
 			Vector3 point = tracker.GetPoint(trackerDistance);
 			controller.LookAt (point);
+			crosshair.transform.position = point;
+			crosshair.DetectTargets(tracker);
 		}
 
 		/* Weapon Input */

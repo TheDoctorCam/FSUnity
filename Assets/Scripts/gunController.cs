@@ -27,4 +27,10 @@ public class gunController : MonoBehaviour {
 			equippedGun.Shoot ();		
 		}
 	}
+	
+	public float GunHeight { // returns height of gun (used for crosshairs height to provide precise aiming)
+		get{
+			return weaponHold.position.y;
+		}
+	}
 }
