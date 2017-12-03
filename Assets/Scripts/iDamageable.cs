@@ -5,7 +5,7 @@ using UnityEngine;
 public interface iDamageable{
 
 
-	void TakeDamage (float damage, RaycastHit hit);
+	void TakeDamage (float damage, Vector3 hitPoint, Vector3 hitDirection);
 
 	void ApplyDamage (float damage);
 }

@@ -15,12 +15,12 @@ public class character : MonoBehaviour, iDamageable {
 	}
 
 	/* TakeDamage passes in damage to be deducted and RaycastHit to instantiate particle effect */
-	public void TakeDamage(float damage, RaycastHit hit){
+	public virtual void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitDirection){
 		ApplyDamage (damage);
 	}
 
 	/* ApplyDamage deduced the passed in damage from the players current health */
-	public void ApplyDamage(float damage){
+	public virtual void ApplyDamage(float damage){
 		health -= damage;
 
 		if (health < 1) {

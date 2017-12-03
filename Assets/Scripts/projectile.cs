@@ -16,7 +16,7 @@ public class projectile : MonoBehaviour {
 		//intersectCollision is an array of all the colliders that the projectile intersects with
 		Collider[] intersectCollision = Physics.OverlapSphere (transform.position, .1f, collisionMask);
 		if (intersectCollision.Length > 0) {
-			HitObject (intersectCollision [0]);
+			HitObject (intersectCollision [0], transform.position);
 		}
 	}
 
@@ -36,23 +36,15 @@ public class projectile : MonoBehaviour {
 		RaycastHit hit;
 
 		if(Physics.Raycast(ray, out hit, moveDistance, collisionMask, QueryTriggerInteraction.Collide)){
-			Hit (hit);
+			HitObject (hit.collider, hit.point);
 		}
 	}
 
-	void Hit(RaycastHit hit){
 
-		iDamageable hitObject = hit.collider.GetComponent<iDamageable> ();
-		if (hitObject != null) {
-			hitObject.TakeDamage (damage, hit);
-		}
-		GameObject.Destroy (gameObject);
-	}
-
-	void HitObject(Collider collision){
+	void HitObject(Collider collision, Vector3 hitPoint){
 		iDamageable hitObject = collision.GetComponent<iDamageable> ();
 		if (hitObject != null) {
-			hitObject.ApplyDamage (damage);
+			hitObject.TakeDamage (damage, hitPoint, transform.forward);
 		}
 		GameObject.Destroy (gameObject);
 	}
