@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\player.cs" />
      <Compile Include="Assets\Scripts\playerController.cs" />
      <Compile Include="Assets\Scripts\projectile.cs" />
+     <Compile Include="Assets\Scripts\Shell.cs" />
      <Compile Include="Assets\Scripts\utility.cs" />
      <None Include="Assets\FantasyCharactersLite\readme.txt" />
  <Reference Include="UnityEngine.UI">
