@@ -25,7 +25,12 @@ public class levelGenerator : MonoBehaviour {
 
 	Level currentLevel;					//Level object to store the currently generated level
 
-	void Start(){
+	void Awake() {
+		FindObjectOfType<enemySpawn> ().OnNewWave += OnNewWave;
+	}
+
+	void OnNewWave(int waveNumber) {
+		levelIndex = waveNumber - 1;
 		GenerateLevel ();
 	}
 

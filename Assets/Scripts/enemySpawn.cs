@@ -28,6 +28,7 @@ public class enemySpawn : MonoBehaviour {
 
 	levelGenerator level;		//reference to levelGenerator class to get open grid coordinates
 
+	public event System.Action<int> OnNewWave;
 
 	void Start(){
 		player = FindObjectOfType<player> ();
@@ -100,6 +101,10 @@ public class enemySpawn : MonoBehaviour {
 		}
 	}
 
+	void ResetPlayerPosition() {
+	playerTransform.position = level.gridFromCurrentPosition (Vector3.zero).position + Vector3.up * 3;
+	}
+	
 	void NextWave(){
 		currentWaveNumber++;
 		if (currentWaveNumber - 1 < waves.Length) {
@@ -107,6 +112,11 @@ public class enemySpawn : MonoBehaviour {
 
 			enemiesToSpawn = currentWave.enemyCount;
 			enemiesActive = enemiesToSpawn;
+			
+			if (OnNewWave != null) {
+				OnNewWave(currentWaveNumber);
+			}
+			ResetPlayerPosition();
 		}
 	}
 
