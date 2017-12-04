@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 22
+  controlID: 9
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
     y: 0
     width: 1664
     height: 951
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 23
+  controlID: 10
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 24
+  controlID: 11
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -352,18 +352,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Materials
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Harrison Scott\cen
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b6290000
-    m_LastClickedID: 10678
+    m_SelectedIDs: 82280000
+    m_LastClickedID: 10370
     m_ExpandedIDs: 000000005c27000082280000522900002e2a0000c237000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000d4370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -508,8 +508,8 @@ MonoBehaviour:
     height: 504
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9efbffff
-    m_LastClickedID: -1122
+    m_SelectedIDs: 80280000
+    m_LastClickedID: 0
     m_ExpandedIDs: a6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -560,14 +560,14 @@ MonoBehaviour:
     width: 828
     height: 504
   m_SceneLighting: 1
-  lastFramingTime: 2808.354282879569
+  lastFramingTime: 134.13905649306565
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6, y: 0.9336505, z: 1}
+    m_Target: {x: 0.004839897, y: 0.75700307, z: -0.022537231}
     speed: 2
-    m_Value: {x: 6, y: 0.9336505, z: 1}
+    m_Value: {x: 0.004839897, y: 0.75700307, z: -0.022537231}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -594,9 +594,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.431667, y: -0.047319926, z: 0.022683324, w: -0.90050536}
   m_Size:
-    m_Target: 7.1876173
+    m_Target: 65.1534
     speed: 2
-    m_Value: 7.1876173
+    m_Value: 65.1534
   m_Ortho:
     m_Target: 0
     speed: 2
