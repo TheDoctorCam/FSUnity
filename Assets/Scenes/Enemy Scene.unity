@@ -22383,7 +22383,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1687603571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 563.5, y: 298, z: 0}
+  m_LocalPosition: {x: 414, y: 243.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1994249832}
@@ -24368,7 +24368,7 @@ Prefab:
     - target: {fileID: 114335930664796742, guid: a1753f081c20a4aaeafc3756c470701a,
         type: 2}
       propertyPath: startHealth
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114335930664796742, guid: a1753f081c20a4aaeafc3756c470701a,
         type: 2}
